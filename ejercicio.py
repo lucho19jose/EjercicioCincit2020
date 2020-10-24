@@ -1,10 +1,10 @@
 #
 tam = int(input('ingrese:'))
-A = []
-B = []
-C = []
-D = []
-Dic = {}
+A = []#se almacena a
+B = []#lista temporal que nos permite join
+C = []#lista principal
+Dic = {}# se guarda el indice del C y el valor de C
+#ingresando valores
 for i in range(tam):
   b = 0
   B.clear()
@@ -13,15 +13,16 @@ for i in range(tam):
   for j in range(A[i]):
     B.append(b)
   C.append(int("".join(B))) 
-  Dic[C[i]] = i+1
+  Dic[C[i]] = i+1 #Dic save
 
-print(A)
 print(C)
-print(Dic)
-
+#Logica de ordenamiento
 keys = list(Dic.keys())
 keys.sort()
 
-for k in keys:
-  print(Dic[k])
+rsta = [] 
 
+for k in keys:
+  rsta.append(Dic[k])
+
+print(rsta)
